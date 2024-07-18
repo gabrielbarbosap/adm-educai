@@ -1,0 +1,14 @@
+<nb-card>
+  <nb-card-header>Ultimas Perguntas</nb-card-header>
+  <nb-card-body>
+    <nb-list>
+      <nb-list-item *ngFor="let question of questions">
+        <div class="question-item">
+          <strong>{{ question.nome }}</strong>
+          <p>{{ question.pergunta }}</p>
+          <small>{{ question.disciplina }}</small>
+        </div>
+      </nb-list-item>
+    </nb-list>
+  </nb-card-body>
+</nb-card>

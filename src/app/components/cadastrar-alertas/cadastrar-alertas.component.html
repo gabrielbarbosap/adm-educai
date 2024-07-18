@@ -1,0 +1,41 @@
+<nb-card>
+  <nb-card-body class="example-items-col">
+    <div class="elements">
+      <div>
+        <label class="h6 text-hint">Título</label>
+        <input
+          type="text"
+          nbInput
+          shape="semi-round"
+          placeholder="inserir título"
+        />
+
+        <label class="h6 text-hint">Descrição</label>
+        <input
+          type="text"
+          nbInput
+          shape="semi-round"
+          placeholder="inserir descrição"
+        />
+        <label class="h6 text-hint">Grupo</label>
+        <nb-select shape="semi-round" multiple placeholder="selecionar grupos">
+          <nb-option value="1">Option 1</nb-option>
+          <nb-option value="2">Option 2</nb-option>
+          <nb-option value="3">Option 3</nb-option>
+          <nb-option value="4">Option 4</nb-option>
+        </nb-select>
+      </div>
+      <div>
+        <label class="h6 text-hint">Ano</label>
+        <nb-select shape="semi-round" multiple placeholder="selecionar ano">
+          <nb-option value="1">Option 1</nb-option>
+          <nb-option value="2">Option 2</nb-option>
+          <nb-option value="3">Option 3</nb-option>
+          <nb-option value="4">Option 4</nb-option>
+        </nb-select>
+        <nb-checkbox status="warning">Ativo</nb-checkbox>
+      </div>
+    </div>
+    <button nbButton class="block" fullWidth status="primary">Salvar</button>
+  </nb-card-body>
+</nb-card>

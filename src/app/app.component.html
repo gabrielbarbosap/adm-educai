@@ -1,0 +1,18 @@
+<nb-layout>
+  <nb-sidebar tag="menu-sidebar" class="menu-sidebar">
+    <img
+      (click)="toggleSidebar()"
+      class="img-top"
+      src="../assets/IMG_6331.png"
+      alt="top Image"
+    />
+    <nb-menu [items]="menuItems"></nb-menu>
+    <div class="sidebar-footer">
+      <img src="../assets/trtrt.png" alt="Footer Image" />
+    </div>
+  </nb-sidebar>
+
+  <nb-layout-column>
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+</nb-layout>

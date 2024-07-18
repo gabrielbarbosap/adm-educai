@@ -1,0 +1,30 @@
+<nb-card>
+  <nb-card-header>
+    <div class="header-container">
+      <span>Disciplinas</span>
+      <input
+        nbInput
+        placeholder="Pesquisar pelo nome"
+        [formControl]="searchTerm"
+      />
+    </div>
+  </nb-card-header>
+  <nb-card-body>
+    <table nb-table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Acessos</th>
+          <th>Ativo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of filteredStudents">
+          <td>{{ student.nome }}</td>
+          <td>{{ student.acessos }}</td>
+          <td><nb-checkbox status="warning"></nb-checkbox></td>
+        </tr>
+      </tbody>
+    </table>
+  </nb-card-body>
+</nb-card>

@@ -1,0 +1,39 @@
+<nb-card>
+  <nb-card-body>
+    <table [nbTreeGrid]="data" equalColumnsWidth>
+      <thead>
+        <tr>
+          <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef="let column"> {{ column }} </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr nbTreeGridRow *nbTreeGridRowDef="let row; columns: allColumns"></tr>
+
+        <ng-container [nbTreeGridColumnDef]="customColumn">
+          <td nbTreeGridCell *nbTreeGridCellDef="let row">
+            <nb-tree-grid-row-toggle [expanded]="row.expanded">
+            </nb-tree-grid-row-toggle>
+            {{ row.data.titulo }}
+          </td>
+        </ng-container>
+
+        <ng-container
+          *ngFor="let column of defaultColumns"
+          [nbTreeGridColumnDef]="column"
+        >
+          <td nbTreeGridCell *nbTreeGridCellDef="let row">
+            {{ row.data[column] }}
+          </td>
+        </ng-container>
+
+        <!-- Nova coluna para o checkbox -->
+        <ng-container nbTreeGridColumnDef="ativoColumn">
+          <td nbTreeGridCell *nbTreeGridCellDef="let row">
+            <nb-checkbox  disabled>
+            </nb-checkbox>
+          </td>
+        </ng-container>
+      </tbody>
+    </table>
+  </nb-card-body>
+</nb-card>

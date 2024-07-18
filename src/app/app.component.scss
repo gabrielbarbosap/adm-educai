@@ -1,0 +1,55 @@
+::ng-deep
+  .nb-theme-default
+  nb-layout
+  .layout
+  .layout-container
+  nb-sidebar.fixed,
+::ng-deep
+  .nb-theme-default
+  nb-layout
+  .layout
+  .layout-container
+  nb-sidebar
+  .main-container-fixed {
+  top: 0 !important;
+}
+
+
+.img-top {
+  width: 4rem;
+  text-align: center;
+}
+
+::ng-deep .nb-theme-default nb-sidebar .main-container {
+  height: 100vh;
+  width: 9rem;
+}
+
+::ng-deep .nb-theme-default nb-sidebar.expanded {
+  width: 9rem;
+  .sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    width: 22%;
+    text-align: center;
+    left: 25%;
+  }
+
+  .img-top {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  width: 66%;
+  text-align: center;
+  left: 7px;
+}
+
+.sidebar-footer img {
+  max-width: 100%;
+  height: auto;
+}
