@@ -1,21 +1,66 @@
-input {
-  margin-bottom: 2rem;
-  margin-top: 0.5rem;
-  display: block;
+// input {
+//   margin-bottom: 2rem;
+//   margin-top: 0.5rem;
+//   display: block;
+// }
+
+// .block {
+//   display: block;
+//   margin-top: 0.5rem;
+// }
+
+// .elements {
+//   display: flex;
+//   justify-content: space-around;
+// }
+
+// nb-select {
+//   display: block;
+//   margin-top: 0.5rem;
+//   margin-bottom: 2rem;
+// }
+
+
+/* Estilos gerais para o cartão do quiz */
+.quiz-card {
+  max-width: 800px; /* Ajusta a largura máxima do cartão principal */
+  margin: 20px auto; /* Centraliza o cartão e adiciona margem superior e inferior */
+  padding: 10px; /* Adiciona algum preenchimento interno */
 }
 
-.block {
-  display: block;
-  margin-top: 0.5rem;
+/* Estilos para o cabeçalho do cartão principal */
+.quiz-header {
+  font-size: 1.5em; /* Tamanho da fonte do cabeçalho do cartão principal */
+  text-align: center; /* Alinha o texto do cabeçalho ao centro */
+  margin-bottom: 10px; /* Margem inferior para espaçamento */
 }
 
-.elements {
-  display: flex;
-  justify-content: space-around;
+/* Estilos para o corpo do cartão principal */
+.quiz-body {
+  padding: 10px; /* Adiciona algum preenchimento interno */
 }
 
-nb-select {
-  display: block;
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
+/* Estilos para o cartão de cada pergunta */
+.question-card {
+  margin-bottom: 15px; /* Margem inferior para separar perguntas */
+  padding: 10px; /* Adiciona algum preenchimento interno */
+  border-radius: 5px; /* Cantos arredondados */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra leve ao redor do cartão */
+}
+
+/* Estilos para o cabeçalho de cada pergunta */
+.question-header {
+  font-size: 1.2em; /* Tamanho da fonte do cabeçalho da pergunta */
+  margin-bottom: 10px; /* Margem inferior para espaçamento */
+}
+
+/* Estilos para o corpo de cada pergunta */
+.question-body {
+  padding: 5px; /* Adiciona algum preenchimento interno */
+}
+
+/* Estilos para itens da lista */
+nb-list-item {
+  font-size: 0.9em; /* Tamanho da fonte dos itens da lista */
+  padding: 5px 0; /* Adiciona algum preenchimento interno vertical */
 }

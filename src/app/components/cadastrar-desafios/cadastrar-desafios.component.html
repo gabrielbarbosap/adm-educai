@@ -1,45 +1,30 @@
-<nb-card>
-  <nb-card-body class="example-items-col">
-    <div class="elements">
-      <div>
-        <label class="h6 text-hint">Título</label>
-        <input
-          type="text"
-          nbInput
-          shape="semi-round"
-          placeholder="inserir título"
-        />
-
-        <label class="h6 text-hint">Descrição</label>
-        <input
-          type="text"
-          nbInput
-          shape="semi-round"
-          placeholder="inserir descrição"
-        />
-
-        <label class="h6 text-hint">Ano</label>
-        <nb-select shape="semi-round" multiple placeholder="selecionar ano">
-          <nb-option value="1">Option 1</nb-option>
-          <nb-option value="2">Option 2</nb-option>
-          <nb-option value="3">Option 3</nb-option>
-          <nb-option value="4">Option 4</nb-option>
-        </nb-select>
-      </div>
-      <div>
-        <label class="h6 text-hint">Sugestão</label>
-        <input
-          type="text"
-          nbInput
-          shape="semi-round"
-          placeholder="inserir sugestão"
-        />
-
-
-
-        <nb-checkbox status="warning">Ativo</nb-checkbox>
-      </div>
-    </div>
-    <button nbButton class="block" fullWidth status="primary">Salvar</button>
-  </nb-card-body>
-</nb-card>
+<form [formGroup]="quizForm">
+  <nb-card class="quiz-card">
+    <nb-card-header class="quiz-header">
+      <h3>Quiz</h3>
+    </nb-card-header>
+    <nb-card-body class="quiz-body">
+      <nb-list>
+        <nb-list-item *ngFor="let questionControl of questionsFormArray.controls; let i = index">
+          <nb-card class="question-card">
+            <nb-card-header class="question-header">
+              <h4>{{ questionControl.get('question')?.value }}</h4>
+              <nb-checkbox 
+                formControlName="{{questionControl.get('selected')}}"
+                (change)="onCheckboxChange(i)">
+                {{ questionControl.get('selected')?.value ? 'Selecionado' : 'Não Selecionado' }}
+              </nb-checkbox>
+            </nb-card-header>
+            <nb-card-body class="question-body">
+              <nb-list>
+                <nb-list-item *ngFor="let alternative of questionControl.get('alternatives')?.value">
+                  {{ alternative }}
+                </nb-list-item>
+              </nb-list>
+            </nb-card-body>
+          </nb-card>
+        </nb-list-item>
+      </nb-list>
+    </nb-card-body>
+  </nb-card>
+</form>

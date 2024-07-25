@@ -32,6 +32,7 @@ import {
   NbTreeGridCellDefDirective,
   NbTreeGridModule,
   NbTableModule,
+  NbUserModule
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { ListagemDesafiosComponent } from './pages/listagem-desafios/listagem-desafios.component';
@@ -70,7 +71,8 @@ import { ListagemDesafiosComponent } from './pages/listagem-desafios/listagem-de
     NbSelectModule,
     NbListModule,
     NbTreeGridModule,
-    NbTableModule
+    NbTableModule,
+    NbUserModule
   ],
   providers: [],
   bootstrap: [AppComponent],
